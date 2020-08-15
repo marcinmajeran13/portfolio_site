@@ -32,3 +32,35 @@ h1{
     text-align: center;
     text-decoration: none;
 }
+
+.footer {
+  position: absolute;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+#footerlinks li{
+    display: inline-block;
+}
+
+#footerlinks li a{
+    color: gray;
+    text-decoration: underline;
+    font-size: small;
+}
+
+body {
+  position: relative;
+    min-height: 100%;
+    padding-bottom: 4rem;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
