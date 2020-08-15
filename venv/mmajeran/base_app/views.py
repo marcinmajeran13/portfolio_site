@@ -5,3 +5,9 @@ from django.views import generic
 
 class Index(generic.TemplateView):
     template_name = 'base_app/index.html'
+    
+class AboutView(generic.TemplateView):
+    template_name = 'base_app/about.html'
+    
+class ContactView(generic.TemplateView):
+    template_name = 'base_app/contact.html'
