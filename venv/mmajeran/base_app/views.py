@@ -11,3 +11,6 @@ class AboutView(generic.TemplateView):
     
 class ContactView(generic.TemplateView):
     template_name = 'base_app/contact.html'
+    
+class WritingView(generic.TemplateView):
+    template_name = 'base_app/writing.html'
