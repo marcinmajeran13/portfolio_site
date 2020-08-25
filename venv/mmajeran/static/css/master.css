@@ -1,5 +1,5 @@
 h1{
-    color: purple;
+    color: #4e1e66;
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -7,6 +7,7 @@ h1{
 
     width: 300px;
     height: 300px;
+    border-radius: 20px;
 }
 
 .mynav{
@@ -20,7 +21,6 @@ h1{
 
 .page-wrapper{
     height: 100%;
-    display: flex'
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -59,9 +59,45 @@ body {
     min-height: 100%;
     padding-bottom: 4rem;
     font-family = 'Roboto mono', monospace;
+    background-color: #352f38;
 }
 
 html {
     height: 100%;
     box-sizing: border-box;
 }
+
+.theme-button{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    float: left;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.theme-buttons{
+    margin: auto;
+    margin-top: 100px;
+}
+
+#purple{
+    background-color: #4e1e66;
+}
+
+#green{
+    background-color: #0f421f;
+}
+
+#spacegray{
+    background-color: #352f38;
+}
+
+#brown{
+    background-color: #361d09;
+}
+
+
+

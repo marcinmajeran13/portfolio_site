@@ -1,4 +1,20 @@
 {% extends 'base_app/base.html' %}
 {% block content %}
-<h1>Welcome!</h1>
+{% load static %}
+
+<div class="page-wrapper">
+    <h1>Welcome!</h1>
+
+    <table class="theme-buttons">
+        <h3>Personalize theme</h3>
+        <p><i>*Theme setting will be saved for your next visit</i></p>
+        <th class="theme-button" id="spacegray"></th>
+        <th class="theme-button" id="purple"></th>
+        <th class="theme-button" id="green"></th>
+        <th class="theme-button" id="brown"></th>
+    </table>
+</div>
+
+
+
 {% endblock %}
