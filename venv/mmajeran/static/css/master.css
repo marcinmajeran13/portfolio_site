@@ -80,7 +80,11 @@ html {
 
 .theme-buttons{
     margin: auto;
-    margin-top: 100px;
+    margin-top: 20px;
+}
+
+.whatdoido{
+    margin-top: 70px;
 }
 
 #purple{
@@ -99,5 +103,13 @@ html {
     background-color: #361d09;
 }
 
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
 
 
