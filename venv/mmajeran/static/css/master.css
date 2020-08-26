@@ -36,9 +36,6 @@ h1{
     color: #4e1e66;
     font-family: 'Roboto Mono', monospace;
 
-
-
-    text-decoration: none;
 }
 
 .footer {
@@ -114,15 +111,19 @@ html {
 
 .top-page .fa {
   padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
   text-decoration: none;
-  border-radius: 50%;
   color: gray;
+
 }
 
 .top-page{
+    height: 100%;
+
 
 }
 
+.media-icons{
+    font-family = 'Roboto mono', monospace;
+    height: 100%;
+    font-size: 15px;
+}
