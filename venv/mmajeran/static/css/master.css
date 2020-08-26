@@ -74,8 +74,6 @@ h1{
 .theme-buttons{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 500px;
-}
 
 .top-page{
     justify-content: center;
@@ -92,10 +90,6 @@ h1{
     font-size: 15px;
     color:gray;
     display: inline;
-}
-
-.whatdoido{
-    margin-top: 70px;
 }
 
 #purple{
