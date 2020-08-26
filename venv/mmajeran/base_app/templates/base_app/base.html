@@ -5,100 +5,96 @@
 
     <meta charset="UTF-8">
     <title>Marcin Majeran</title>
-<!--    Bootstrap-->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<!--    FONTS-->
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-<!--    CSS-->
-<link rel="stylesheet" href="{% static 'css/master.css' %}">
-<!--    Medium Style Editor-->
-<script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
-<!--    Icons-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--    Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--    FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!--    CSS-->
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+    <!--    Medium Style Editor-->
+    <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css"
+          type="text/css" media="screen" charset="utf-8">
+    <!--    Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 </head>
 <body onload="change_background()">
 
 
-<!--      <div id="logo" style="background-image: url(/images/custom/logo.png);"></div>-->
-<!--<div class="top-page">-->
-<!--    <p>-->
-<!--        <div class="page-wrapper">-->
-<!--            <h1 id="title"><a href="{% url 'index' %}">Marcin Majeran</a></h1>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            Find me on:-->
-<!--           <a href="#" class="fa fa-facebook"></a>-->
-<!--           <a href="#" class="fa fa-github"></a>-->
-<!--           <a href="#" class="fa fa-linkedin"></a>-->
-<!--           <a href="#" class="fa fa-stack-overflow "></a>-->
-<!--            -->
-<!--    </p>-->
-
-<!--</div>-->
-
-
 <div class="top-page container">
     <h1 id="title"><a href="{% url 'index' %}">Marcin Majeran</a></h1>
     <div class="media-icons">
-           <a href="#" class="fa fa-facebook"></a>
-           <a href="#" class="fa fa-github"></a>
-           <a href="#" class="fa fa-linkedin"></a>
-           <a href="#" class="fa fa-stack-overflow "></a>
+        <a href="https://www.facebook.com/marcin.majeran" class="fa fa-facebook" target="_blank"
+           rel="noopener noreferrer"></a>
+        <a href="https://github.com/marcinmajeran13" class="fa fa-github" target="_blank" rel="noopener noreferrer"></a>
+        <a href="https://www.linkedin.com/in/marcin-majeran-233b02195/" class="fa fa-linkedin" target="_blank"
+           rel="noopener noreferrer"></a>
+        <a href="https://stackoverflow.com/users/14165755/marcin-majeran" class="fa fa-stack-overflow" target="_blank"
+           rel="noopener noreferrer"></a>
     </div>
 </div>
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="mynav collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav mynav">
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'index' %}">Home<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'about' %}">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'writing' %}">Writing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Apps(Not yet)</a>
-      </li>
-        <li class="nav-item">
-        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-      </li>
-    </ul>
-  </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="mynav collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mynav">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'index' %}">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'writing' %}">Writing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Apps(Not yet)</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 
 <div class="container">
-{% block content %}
+    {% block content %}
 
-{% endblock %}
+    {% endblock %}
 </div>
 
 <div class="container">
-  <footer class="footer">
-              <ul id="footerlinks">
-                  <li><a href="{% url 'index' %}">Home</a></li>
-                  <li><a href="{% url 'writing' %}">Writing</a></li>
-                  <li><a href="{% url 'about' %}">About</a></li>
-                  <li><a href="{% url 'contact' %}">Contact</a></li>
-              </ul>
-  </footer>
+    <footer class="footer">
+        <ul id="footerlinks">
+            <li id="copyright">Copyright © 2020 Marcin Majeran</li>
+            <li id="copyright">|</li>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'writing' %}">Writing</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </footer>
 </div>
 
 </body>
 
 <script src="{% static 'js/theme_changer.js' %}"></script>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 
 </html>
