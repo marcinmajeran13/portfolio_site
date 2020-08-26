@@ -20,10 +20,8 @@ h1{
     color: #4e1e66;
     font-family: 'Roboto Mono', monospace;
     text-align: center;
-    float: center;
-    margin-right: 200px;
+    float:center;
     display: inline;
-
 }
 
 #title a{
@@ -72,21 +70,20 @@ h1{
 }
 
 .top-page{
-    margin-bottom: 20px;
-    display: flex;
+    height: 100%;
 }
 
 .top-page .fa {
-  padding: 20px;
   text-decoration: none;
   color: gray;
 }
 
 .media-icons{
-    font-family = 'Roboto mono', monospace;
     font-size: 15px;
     text-align: right;
     float: right;
+    color:gray;
+    display: inline;
 }
 
 .whatdoido{
