@@ -23,6 +23,7 @@ h1{
     justify-content: center;
     align-items: center;
     text-align: center;
+
 }
 
 .page-wrapper{
@@ -35,6 +36,8 @@ h1{
 #title{
     color: #4e1e66;
     font-family: 'Roboto Mono', monospace;
+
+    margin-right: 200px;
 
 }
 
@@ -117,13 +120,14 @@ html {
 }
 
 .top-page{
-    height: 100%;
+    margin-bottom: 20px;
 
 
 }
 
 .media-icons{
     font-family = 'Roboto mono', monospace;
-    height: 100%;
     font-size: 15px;
+    text-align: right;
+    float: right;
 }
