@@ -1,65 +1,6 @@
-h1{
-    color: #4e1e66;
-    font-family: 'Roboto Mono', monospace;
-}
-
-#title a{
-    color: #4e1e66;
-    font-family: 'Roboto Mono', monospace;
-    text-decoration: none;
-}
-
-.avatar{
-
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-}
-
-.mynav{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-}
-
-.page-wrapper{
+html {
     height: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-#title{
-    color: #4e1e66;
-    font-family: 'Roboto Mono', monospace;
-
-    margin-right: 200px;
-
-}
-
-.footer {
-  position: absolute;
-    height: 50px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
-    text-align: center;
-    flex-shrink: 0;
-}
-
-#footerlinks li{
-    display: inline-block;
-}
-
-#footerlinks li a{
-    color: gray;
-    text-decoration: underline;
-    font-size: small;
+    box-sizing: border-box;
 }
 
 body {
@@ -70,9 +11,47 @@ body {
     background-color: #352f38;
 }
 
-html {
+h1{
+    color: #4e1e66;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#title{
+    color: #4e1e66;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    float: center;
+    margin-right: 200px;
+    display: inline;
+
+}
+
+#title a{
+    color: #4e1e66;
+    font-family: 'Roboto Mono', monospace;
+    text-decoration: none;
+}
+
+.mynav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.page-wrapper{
     height: 100%;
-    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.avatar{
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
 }
 
 .theme-button{
@@ -90,6 +69,24 @@ html {
     margin-left: auto;
     margin-right: auto;
     margin-top: 5px;
+}
+
+.top-page{
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.top-page .fa {
+  padding: 20px;
+  text-decoration: none;
+  color: gray;
+}
+
+.media-icons{
+    font-family = 'Roboto mono', monospace;
+    font-size: 15px;
+    text-align: right;
+    float: right;
 }
 
 .whatdoido{
@@ -112,22 +109,23 @@ html {
     background-color: #361d09;
 }
 
-.top-page .fa {
-  padding: 20px;
-  text-decoration: none;
-  color: gray;
-
+.footer {
+  position: absolute;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    flex-shrink: 0;
 }
 
-.top-page{
-    margin-bottom: 20px;
-
-
+#footerlinks li{
+    display: inline-block;
 }
 
-.media-icons{
-    font-family = 'Roboto mono', monospace;
-    font-size: 15px;
-    text-align: right;
-    float: right;
+#footerlinks li a{
+    color: gray;
+    text-decoration: underline;
+    font-size: small;
 }
