@@ -21,10 +21,21 @@
 </head>
 <body onload="change_background()">
 
-<a href="{% url 'index' %}" id="title">
+
 <!--      <div id="logo" style="background-image: url(/images/custom/logo.png);"></div>-->
-      <h1>Marcin Majeran</h1>
-  </a>
+<div class="top-page">
+    <p>
+            <h1 id="title"><a href="{% url 'index' %}">Marcin Majeran</a></h1>
+        </div>
+        <div class="media-icons">
+            Find me on:
+           <a href="#" class="fa fa-facebook"></a>
+           <a href="#" class="fa fa-github"></a>
+           <a href="#" class="fa fa-linkedin"></a>
+           <a href="#" class="fa fa-stack-overflow "></a>
+        </div>
+    </p>
+
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
