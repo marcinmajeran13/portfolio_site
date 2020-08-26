@@ -1,0 +1,18 @@
+{% extends 'base_app/base.html' %}
+{% block content %}
+
+    <div class="page-wrapper">
+        <h1>{{ post.title }}</h1>
+        {{ post.publish_date }}
+
+        <p>{{ post.text|safe|linebreaksbr }}</p>
+
+        {% if user.is_authenticated %}
+
+        <a class="btn btn-primary" href="{% url 'post_edit' slug=post.slug %}">Edit</a>
+        <a class="btn btn-danger" href="{% url 'post_remove' slug=post.slug %}">Remove</a>
+        {% endif %}
+
+    </div>
+
+{% endblock %}

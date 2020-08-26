@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.utils.text import slugify
+from django.urls import reverse
 
 # Create your models here.
 
@@ -17,8 +18,11 @@ class Post(models.Model):
     
     def publish(self):
         self.publish_date = timezone.now()
-        self.slug = slugify(title)
+        self.slug = slugify(self.title)
         self.save()
+    
+    def get_abosulte_url(self):
+        return reverse('post_detail', kwargs={'slug':self.slug})
         
      
 # class Comment (models.Model):
