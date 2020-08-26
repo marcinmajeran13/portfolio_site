@@ -47,7 +47,7 @@ h1{
 }
 
 .center {
-    margin-top: 100px;
+    margin-top: 1px;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -75,6 +75,7 @@ h1{
     margin-left: auto;
     margin-right: auto;
 
+
 .top-page{
     justify-content: center;
     align-items: center;
@@ -84,6 +85,7 @@ h1{
 .top-page .fa {
   text-decoration: none;
   color: gray;
+  padding: 50px;
 }
 
 .media-icons{
@@ -109,7 +111,7 @@ h1{
 }
 
 .footer {
-  position: absolute;
+    position: absolute;
     height: 50px;
     bottom: 0px;
     left: 0px;
