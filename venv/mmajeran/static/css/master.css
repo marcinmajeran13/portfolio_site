@@ -76,9 +76,17 @@ h1 a{
 }
 
 .menu{
-    float:left;
+    text-align:left;
     width:100%;
     margin-bottom: 40px;
+}
+
+.post-form{
+    margin-top:50px;
+}
+
+.post-form *{
+    padding: 5px;
 }
 
 .author{
