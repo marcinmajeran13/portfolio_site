@@ -6,6 +6,7 @@ from base_app.forms import PostForm
 from base_app.models import Post
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, get_object_or_404, redirect
 
 
 # Create your views here.
@@ -19,24 +20,22 @@ class AboutView(generic.TemplateView):
 class ContactView(generic.TemplateView):
     template_name = 'base_app/contact.html'
     
-class WritingView(generic.TemplateView):
-    template_name = 'base_app/writing.html'
-    
-class PostListView(generic.ListView):
+class WritingView(generic.ListView):
     model = Post
+    # 
+    # def get_queryset(self):
+    #     return Post.objects.filter(publish_date__lte=timezone.now()).order_by('-publish_date')
     
-    def get_queryset(self):
-        return Post.object.filter(publish_date__lte=timezone.now().order_by('-publish_date'))
+class PostDetailView(generic.DetailView):
+    model = Post
 
 class CreatePostView(LoginRequiredMixin, generic.CreateView):
-    login_url = '/login/'
     redirect_field_name = 'blog/post_detail.html'
     form_class = PostForm
     model = Post
 
 
 class PostUpdateView(LoginRequiredMixin, generic.UpdateView):
-    login_url = '/login/'
     redirect_field_name = 'blog/post_detail.html'
     form_class = PostForm
     model = Post
