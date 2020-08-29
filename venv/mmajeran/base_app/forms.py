@@ -8,8 +8,15 @@ class PostForm(forms.ModelForm):
         
         widgets = {
             'title': forms.TextInput(attrs={'class': 'textinputclass'}),
-            'text': forms.Textarea(attrs={'class': 'editable medium-editor-textarea postcontent'}),
+            'text': forms.Textarea(attrs={'class': 'editable medium-editor-textarea'}),
         }
+
+class ContactForm(forms.Form):
+    email = forms.EmailField(required=True)
+    subject = forms.CharField(required=True)
+    message = forms.CharField(widget=forms.Textarea, required=True)
+
+
 
 # class CommentForm(forms.ModelForm):
 #     class Meta:
