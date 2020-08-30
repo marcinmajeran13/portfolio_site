@@ -12,9 +12,9 @@ class PostForm(forms.ModelForm):
         }
 
 class ContactForm(forms.Form):
-    email = forms.EmailField(required=True)
-    subject = forms.CharField(required=True)
-    message = forms.CharField(widget=forms.Textarea, required=True)
+    email = forms.EmailField(required=True, widget=forms.TextInput(attrs={'class':'emailfield'}))
+    subject = forms.CharField(required=True,widget=forms.TextInput(attrs={'class':'subjectfield'}))
+    message = forms.CharField(widget=forms.Textarea(attrs={'class':'emailfield'}), required=True)
 
 
 
