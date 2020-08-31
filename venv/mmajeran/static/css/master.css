@@ -94,9 +94,21 @@ h1 a{
     margin-top: 50px;
 }
 
-.emailfield, .subjectfield, .textfield{
+.emailfield, .subjectfield{
     background-color: #303030;
     color: white;
+}
+
+.btn-primary{
+    background-color:#8140b3 !important;
+    border-color:#8140b3 !important;
+}
+
+.textfield{
+    border-radius: 50%;
+    background-color: #303030;
+    color: white;
+    height: 50px;
 }
 
 #contact{
