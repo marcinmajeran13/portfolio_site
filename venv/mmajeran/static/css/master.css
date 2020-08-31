@@ -1,6 +1,5 @@
 html {
     height: 100%;
-    box-sizing: border-box;
 }
 
 body {
@@ -18,6 +17,7 @@ body {
 h1{
     color: #8140b3;
     font-family: 'Roboto Mono', monospace;
+    text-decoration: none;
 }
 
 h1 a{
@@ -40,10 +40,14 @@ h1 a{
     text-decoration: none;
 }
 
+.repair-title a{
+    color: #8140b3;
+    font-family: 'Roboto Mono', monospace;
+    text-decoration: none;
+}
+
 .mynav{
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -109,10 +113,6 @@ h1 a{
     background-color: #303030;
     color: white;
     height: 50px;
-}
-
-#contact{
-    margin-top: 50px;
 }
 
 .editable{
@@ -193,7 +193,7 @@ h1 a{
     height: 50px;
     bottom: 0px;
     left: 0px;
-    right: 0px;
+    right: 40px;
     margin-bottom: 0px;
     text-align: center;
     flex-shrink: 0;
@@ -212,4 +212,43 @@ h1 a{
 #copyright{
     color: gray;
     font-size: small;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .theme-button{
+        width: 28px;
+        height: 28px;
+    }
+
+    #title{
+        display:block;
+        text-decoration: none;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+
+    .theme-button{
+        width: 30px;
+        height: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .center{
+        margin-top: 10px;
+    }
+
+    #title{
+        width: 100%;
+        display: block;
+        text-decoration: none;
+    }
+
+    #contacttitle{
+        font-size: 35px;
+    }
+
 }

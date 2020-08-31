@@ -3,8 +3,8 @@
 {% load crispy_forms_tags %}
 
 
-<div class="page-wrapper container" id=>
-    <h1>Contact me:</h1>
+<div class="page-wrapper container" id=contact>
+    <h1 id="contacttitle">Contact me:</h1>
     <form method="POST">
         {% csrf_token %}
         {{form|crispy}}
