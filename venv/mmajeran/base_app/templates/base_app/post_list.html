@@ -3,29 +3,29 @@
 <div class="page-wrapper">
     <p>Here is a section where I publish descriptions of electronic devices' repairs(mostly smartphones) that I did,
         along with my thoughts.
-        </p>
+    </p>
     <p>So it can be treated like a blog :)</p>
     <p>Enjoy!</p>
 </div>
 
 
-    {% if user.is_authenticated %}
-        <div class="menu">
-            <a class="btn btn-success" href="{% url 'post_new' %}">New Post</a>
-            <a class="btn btn-primary" href="{% url 'admin:logout' %}">Logout</a>
-        </div>
-    {% endif %}
+{% if user.is_authenticated %}
+<div class="menu">
+    <a class="btn btn-success" href="{% url 'post_new' %}">New Post</a>
+    <a class="btn btn-primary" href="{% url 'admin:logout' %}">Logout</a>
+</div>
+{% endif %}
 
-    <div class="col-md-12 posts">
-        {% for post in post_list %}
+<div class="col-md-12 posts">
+    {% for post in post_list %}
 
-            <i class="repair-icon fas fa-wrench"></i>
-            <h1 class="repair-title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <div class="date">
-                <p>Published on: {{ post.publish_date|date:"D M Y" }} by {{ post.author }}</p>
-            </div>
-        {% endfor %}
+    <i class="repair-icon fas fa-wrench"></i>
+    <h1 class="repair-title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+    <div class="date">
+        <p>Published on: {{ post.publish_date|date:"D M Y" }} by {{ post.author }}</p>
     </div>
+    {% endfor %}
+</div>
 
 
 {% endblock %}
