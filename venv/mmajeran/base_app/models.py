@@ -5,10 +5,13 @@ from django.urls import reverse
 # Create your models here.
 
 class Post(models.Model):
+    post_type = (('Repair', 'Repair'), ('Review', 'Review'))
+
     author = models.CharField(default='Marcin Majeran',max_length=50)
     title = models.CharField(max_length=100)
     text = models.TextField()
     publish_date = models.DateTimeField(default=timezone.now)
+    type = models.CharField(max_length=32, choices=post_type, default='type')
     
     def __str__(self):
         return self.title

@@ -18,8 +18,11 @@
 
 <div class="col-md-12 posts">
     {% for post in post_list %}
-
+    {% if post.type == 'Repair' %}
     <i class="repair-icon fas fa-wrench"></i>
+    {% else %}
+    <i class="repair-icon fas fa-shopping-cart"></i>
+    {% endif %}
     <h1 class="repair-title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
     <div class="date">
         <p>Published on: {{ post.publish_date|date:"D M Y" }} by {{ post.author }}</p>
