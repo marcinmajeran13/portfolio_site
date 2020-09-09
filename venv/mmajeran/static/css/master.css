@@ -98,21 +98,26 @@ h1 a{
     margin-top: 50px;
 }
 
-.emailfield, .subjectfield{
-    background-color: #303030;
-    color: white;
-    border-color: #787474;
+#contacttitle{
+    font-size: 30px;
 }
 
-.messagefield{
-    height: 4em;
+.emailfield, .subjectfield{
+    height: 2em;
     transition: ease-in-out, height .35s ease-in-out;
     background-color: #303030;
     color: white;
     border-color: #787474;
 }
 
+.messagefield{
+    background-color: #303030;
+    color: white;
+    border-color: #787474;
+}
+
 .emailfield:focus, .subjectfield:focus{
+    height: 4em;
     background-color: #787474;
     color: white;
 }
@@ -120,7 +125,7 @@ h1 a{
 .messagefield:focus{
     background-color: #787474;
     color: white;
-    height: 11em;
+
 }
 
 .btn-primary{
