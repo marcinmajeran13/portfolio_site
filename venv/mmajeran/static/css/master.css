@@ -101,6 +101,26 @@ h1 a{
 .emailfield, .subjectfield{
     background-color: #303030;
     color: white;
+    border-color: #787474;
+}
+
+.messagefield{
+    height: 4em;
+    transition: ease-in-out, height .35s ease-in-out;
+    background-color: #303030;
+    color: white;
+    border-color: #787474;
+}
+
+.emailfield:focus, .subjectfield:focus{
+    background-color: #787474;
+    color: white;
+}
+
+.messagefield:focus{
+    background-color: #787474;
+    color: white;
+    height: 11em;
 }
 
 .btn-primary{

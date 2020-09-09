@@ -20,7 +20,7 @@
     {% for post in post_list %}
     {% if post.type == 'Repair' %}
     <i class="repair-icon fas fa-wrench"></i>
-    {% else %}
+    {% elif post.type == 'Review' %}
     <i class="repair-icon fas fa-shopping-cart"></i>
     {% endif %}
     <h1 class="repair-title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
