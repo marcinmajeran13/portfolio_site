@@ -22,6 +22,14 @@ document.querySelector('.top-page').addEventListener('mouseout', function(){
     document.querySelector('.title-icon').style.color = 'gray'
 })
 
+document.querySelector('.top-page').addEventListener('touchstart', function(){
+    document.querySelector('.title-icon').style.color = '#fdfd96'
+})
+
+document.querySelector('.top-page').addEventListener('touchend', function(){
+    document.querySelector('.title-icon').style.color = 'gray'
+})
+
 function adds() {
 
 
