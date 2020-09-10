@@ -75,6 +75,7 @@ h1 a{
     pointer-events: none;
     cursor: default;
     color:  #1d1f1e;
+    padding: 5px;
 }
 .icon-bar {
     border-radius: 20%;
