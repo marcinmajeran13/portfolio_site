@@ -1,4 +1,9 @@
 {% extends 'base_app/base.html' %}
+
+{% block body_tag %}
+    <body onload="change_background()">
+{% endblock %}
+
 {% block content %}
 <div class="page-wrapper">
     <form method="POST">

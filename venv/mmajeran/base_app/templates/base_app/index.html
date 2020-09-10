@@ -1,6 +1,8 @@
-<body onload="adds(); change_background()">
 {% extends 'base_app/base.html' %}
 
+{% block body_tag %}
+    <body onload="adds(); change_background()">
+{% endblock %}
 
 {% block content %}
 {% load static %}
