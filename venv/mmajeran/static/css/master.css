@@ -251,6 +251,10 @@ h1 a{
         text-decoration: none;
     }
 
+    .repair-title, .repair-icon{
+        font-size: 28px;
+    }
+
 }
 
 @media only screen and (min-width: 300px) and (max-width: 370px) {
