@@ -22,14 +22,20 @@
 
 
 </head>
+{% block body_tag %}
 <body onload="change_background()">
+{% endblock %}
 
 
 <div class="top-page container">
-    <h1 id="title"><a href="{% url 'index' %}">Marcin Majeran</a></h1>
+
+    <h1 id="title">
+        <span class="far fa-lightbulb title-icon"></span>
+        <a id="me" href="{% url 'index' %}">Marcin Majeran</a>
+    </h1>
     <div class="media-icons">
-        <a href="https://www.facebook.com/marcin.majeran" class="fa fa-facebook" target="_blank"
-           rel="noopener noreferrer"></a>
+        <!--        <a href="https://www.facebook.com/marcin.majeran" class="fa fa-facebook" target="_blank"-->
+        <!--           rel="noopener noreferrer"></a>-->
         <a href="https://github.com/marcinmajeran13" class="fa fa-github" target="_blank" rel="noopener noreferrer"></a>
         <a href="https://www.linkedin.com/in/marcin-majeran-233b02195/" class="fa fa-linkedin" target="_blank"
            rel="noopener noreferrer"></a>
@@ -39,11 +45,16 @@
 </div>
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg navbar-custom navbar-dark">
+
+
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
     </button>
+
     <div class="mynav collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mynav">
             <li class="nav-item active">
@@ -56,7 +67,7 @@
                 <a class="nav-link" href="{% url 'post_list' %}">Writing</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Apps(Not yet)</a>
+                <a class="disabled" href="#" tabindex="-1" aria-disabled="true">Apps(Not yet)</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'contact' %}">Contact</a>
