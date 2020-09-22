@@ -13,5 +13,9 @@ urlpatterns = [
     path('post/<int:pk>/publish/', views.post_publish, name='post_publish'),
     path('contact/', views.contactView, name='contact'),
     path('success/', views.successView, name='success'),
-
+    path('app_list/',views.AppsView.as_view(),name='app_list'),
+    path('app/new/', views.CreateAppView.as_view(), name='app_new'),
+    path('app/<int:pk>/edit/', views.AppUpdateView.as_view(), name='app_edit'),
+    path('app/<int:pk>/remove/', views.AppDeleteView.as_view(), name='app_remove'),
+    path('app/<int:pk>/publish/', views.app_add, name='app_add'),
 ]

@@ -1,4 +1,4 @@
-from base_app.models import Post
+from base_app.models import Post, App
 from django import forms
 
 
@@ -10,6 +10,17 @@ class PostForm(forms.ModelForm):
         widgets = {
             'title': forms.TextInput(attrs={'class': 'textinputclass'}),
             'text': forms.Textarea(attrs={'class': 'editable medium-editor-textarea'}),
+        }
+
+
+class AppForm(forms.ModelForm):
+    class Meta:
+        model = App
+        fields = ['name', 'description', 'github_link', 'other_link']
+
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'textinputclass'}),
+            'description': forms.Textarea(attrs={'class': 'editable medium-editor-textarea'}),
         }
 
 

@@ -24,5 +24,22 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('post_detail', kwargs={'pk': self.pk})
 
-# class Comment (models.Model):
+# class Comment(models.Model):
 #     pass
+
+
+class App(models.Model):
+    name = models.CharField(max_length=256)
+    description = models.CharField(max_length=456, blank=True)
+    github_link = models.URLField(blank=True, null=True)
+    other_link = models.URLField(blank=True, null=True)
+    # image = models.ImageField()
+
+    def __str__(self):
+        return self.name
+
+    def add_app(self):
+        self.save()
+
+    def get_absolute_url(self):
+        return reverse('app_list')

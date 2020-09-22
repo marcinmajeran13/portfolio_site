@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.views import generic
 from django.utils import timezone
 from django.contrib.auth.mixins import LoginRequiredMixin
-from base_app.forms import PostForm, ContactForm
-from base_app.models import Post
+from base_app.forms import PostForm, ContactForm, AppForm
+from base_app.models import Post, App
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
@@ -12,28 +12,31 @@ from django.conf import settings
 from django.http import HttpResponse, HttpResponseRedirect
 
 
-
 # Create your views here.
 
 class Index(generic.TemplateView):
     template_name = 'base_app/index.html'
-    
+
+
 class AboutView(generic.TemplateView):
     template_name = 'base_app/about.html'
-    
+
+
 class ContactView(generic.CreateView):
     template_name = 'base_app/contact.html'
     form_class = ContactForm
 
-    
+
 class WritingView(generic.ListView):
     model = Post
-    # 
+    #
     # def get_queryset(self):
     #     return Post.objects.filter(publish_date__lte=timezone.now()).order_by('-publish_date')
-    
+
+
 class PostDetailView(generic.DetailView):
     model = Post
+
 
 class CreatePostView(LoginRequiredMixin, generic.CreateView):
     redirect_field_name = 'blog/post_detail.html'
@@ -50,13 +53,42 @@ class PostUpdateView(LoginRequiredMixin, generic.UpdateView):
 class PostDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Post
     success_url = reverse_lazy('post_list')
-    
-    
+
+
 @login_required
 def post_publish(request, slug):
     post = get_object_or_404(Post, slug=slug)
     post.publish()
     return redirect('post_detail', slug=slug)
+
+
+class AppsView(generic.ListView):
+    model = App
+
+
+class CreateAppView(LoginRequiredMixin, generic.CreateView):
+    redirect_field_name = 'blog/app_list.html'
+    form_class = AppForm
+    model = App
+
+
+class AppUpdateView(LoginRequiredMixin, generic.UpdateView):
+    redirect_field_name = 'blog/app_list.html'
+    form_class = AppForm
+    model = App
+
+
+class AppDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = App
+    success_url = reverse_lazy('app_list')
+
+
+@login_required
+def app_add(request, slug):
+    app = get_object_or_404(App, slug=slug)
+    app.publish()
+    return redirect('app_list', slug=slug)
+
 
 # def sendEmail(request):
 #     if request.method == 'POST':
@@ -78,6 +110,8 @@ def post_publish(request, slug):
 #         email.send()
 #
 #     return render(request, 'base_app/email_sent.html')
+
+
 def contactView(request):
     if request.method == 'GET':
         form = ContactForm()
@@ -93,6 +127,7 @@ def contactView(request):
                 return HttpResponse('Invalid header found.')
             return redirect('success')
     return render(request, "base_app/contact.html", {'form': form})
+
 
 def successView(request):
     return render(request, 'base_app/email_sent.html')
