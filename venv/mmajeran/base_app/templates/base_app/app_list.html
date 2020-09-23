@@ -1,0 +1,39 @@
+{% extends 'base_app/base.html' %}
+
+{% block body_tag %}
+    <body onload="change_background()">
+{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<div class="menu">
+    <a class="btn btn-success" href="{% url 'app_new' %}">New App</a>
+    <a class="btn btn-primary" href="{% url 'admin:logout' %}">Logout</a>
+</div>
+{% endif %}
+
+<div class="col-md-12 posts">
+    {% for app in app_list %}
+    <h1 class="app-name">{{ app.name }}</h1>
+    <div class="info">
+<!--        <p>{{ app.image }}</p>-->
+        <p>{{ app.description|safe|linebreaksbr }}</p>
+        <p>Github Link: <a class="fa fa-github" target="_blank" rel="noopener noreferrer" href="{{ app.github_link }}"></a></p>
+        {% if app.other_link == '' or app.other_link == null %}
+        {% else %}
+        <p>Other Link/s: <a target="_blank" href="{{ app.other_link }}">Click</a></p>
+        {% endif %}
+        {% if user.is_authenticated %}
+            <div class="menu">
+                <a class="btn btn-primary" href="{% url 'app_edit' slug=app.slug %}">Edit</a>
+                <a class="btn btn-danger" href="{% url 'app_remove' slug=app.slug %}">Remove</a>
+            </div>
+        {% endif %}
+
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

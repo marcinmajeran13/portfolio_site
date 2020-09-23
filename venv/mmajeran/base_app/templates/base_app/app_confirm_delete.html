@@ -1,0 +1,17 @@
+{% extends 'base_app/base.html' %}
+
+{% block body_tag %}
+    <body onload="change_background()">
+{% endblock %}
+
+{% block content %}
+<div class="page-wrapper">
+    <form method="POST">
+        {% csrf_token %}
+        <h2>Are you sure you want to delete app: {{ object }}?</h2>
+        <input class="btn btn-danger" value="Delete" type="submit">
+        <a class="btn btn-primary" href="{% url 'app_list' %}">Back</a>
+    </form>
+</div>
+
+{% endblock %} %}
