@@ -84,10 +84,10 @@ class AppDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 
 @login_required
-def app_add(request, slug):
-    app = get_object_or_404(App, slug=slug)
+def app_add(request):
+    app = get_object_or_404(App)
     app.publish()
-    return redirect('app_list', slug=slug)
+    return redirect('app_list')
 
 
 # def sendEmail(request):

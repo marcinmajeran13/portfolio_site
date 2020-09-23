@@ -10,7 +10,7 @@
         {% csrf_token %}
         <h2>Are you sure you want to delete post: {{ object }}?</h2>
         <input class="btn btn-danger" value="Delete" type="submit">
-        <a class="btn btn-primary" href="{% url 'post_detail' pk=post.pk %}">Back</a>
+        <a class="btn btn-primary" href="{% url 'post_detail' slug=post.slug %}">Back</a>
     </form>
 </div>
 
