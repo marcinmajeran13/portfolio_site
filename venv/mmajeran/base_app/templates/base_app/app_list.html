@@ -1,4 +1,5 @@
 {% extends 'base_app/base.html' %}
+{% load static %}
 
 {% block body_tag %}
     <body onload="change_background()">
@@ -13,27 +14,32 @@
 </div>
 {% endif %}
 
-<div class="col-md-12 posts">
+
     {% for app in app_list %}
-    <h1 class="app-name">{{ app.name }}</h1>
-    <div class="info">
-<!--        <p>{{ app.image }}</p>-->
-        <p>{{ app.description|safe|linebreaksbr }}</p>
-        <p>Github Link: <a class="fa fa-github" target="_blank" rel="noopener noreferrer" href="{{ app.github_link }}"></a></p>
-        {% if app.other_link == '' or app.other_link == null %}
-        {% else %}
-        <p>Other Link/s: <a target="_blank" href="{{ app.other_link }}">Click</a></p>
-        {% endif %}
+    <div class="column">
+            <img width="100" height="100" src="{% static app.return_img_url %}">
+
+            <div class="app-name">
+                {{ app.name }}
+            </div>
+
+
+            <p>{{ app.description|safe|linebreaksbr }}</p>
+
+        <p>GitHub Link: <a class="fa fa-github" target="_blank" rel="noopener noreferrer" href="{{ app.github_link }}"></a></p>
+
+            {% if app.other_link != '' and app.other_link != null %}
+       <p>Other Link/s: <a target="_blank" href="{{ app.other_link }}">Click</a></p>
+            {% endif %}
+
         {% if user.is_authenticated %}
+
             <div class="menu">
                 <a class="btn btn-primary" href="{% url 'app_edit' slug=app.slug %}">Edit</a>
                 <a class="btn btn-danger" href="{% url 'app_remove' slug=app.slug %}">Remove</a>
             </div>
         {% endif %}
-
     </div>
     {% endfor %}
 </div>
-
-
 {% endblock %}

@@ -16,8 +16,7 @@ class PostForm(forms.ModelForm):
 class AppForm(forms.ModelForm):
     class Meta:
         model = App
-        fields = ['name', 'description', 'github_link', 'other_link']
-
+        fields = ['name', 'description', 'image', 'github_link', 'other_link']
         widgets = {
             'name': forms.TextInput(attrs={'class': 'textinputclass'}),
             'description': forms.Textarea(attrs={'class': 'editable medium-editor-textarea'}),

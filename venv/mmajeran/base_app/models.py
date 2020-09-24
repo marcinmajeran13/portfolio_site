@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.urls import reverse
 from django.utils.text import slugify
+from mmajeran import settings
 
 
 # Create your models here.
@@ -16,6 +17,7 @@ class Post(models.Model):
     publish_date = models.DateTimeField(default=timezone.now)
     type = models.CharField(max_length=32, choices=post_type, default='type')
     slug = models.SlugField(unique=True, default=publish_date)
+
 
     def __str__(self):
         return self.title
@@ -37,7 +39,7 @@ class App(models.Model):
     github_link = models.URLField(blank=True, null=True)
     other_link = models.URLField(blank=True, null=True)
     slug = models.SlugField(unique=True)
-    # image = models.ImageField()
+    image = models.ImageField(upload_to="uploads/")
 
     def __str__(self):
         return self.name
@@ -48,3 +50,6 @@ class App(models.Model):
 
     def get_absolute_url(self):
         return reverse('app_list')
+
+    def return_img_url(self):
+        return f'images/{self.image}'

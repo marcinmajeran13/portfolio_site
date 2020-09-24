@@ -150,9 +150,10 @@ h1 a{
 }
 
 .menu{
-    text-align:left;
+    text-align:center;
     width:100%;
     margin-bottom: 40px;
+    margin-top: 40px;
 }
 
 .post-form{
@@ -293,6 +294,21 @@ h1 a{
 
 #mustard{
     background-color: #614805;
+}
+
+
+.app-name{
+    display: inline;
+    width: 40px;
+    color: #8140b3;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+}
+
+.column{
+    float: left;
+    width: 50%;
+    padding: 40px;
 }
 
 .footer {
