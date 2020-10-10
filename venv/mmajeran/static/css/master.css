@@ -7,7 +7,8 @@ body {
     min-height: 100%;
     padding-bottom: 4rem;
     font-family = 'Roboto mono', monospace;
-    background-color: #352f38;
+    background-color: #242625;
+    transition: 500ms linear;
 }
 
 .container{
@@ -54,6 +55,7 @@ h1 a{
 
 .navbar-custom {
     background-color: #303030;
+    transition: 500ms linear;
 }
 
 .navbar-custom .navbar-brand,

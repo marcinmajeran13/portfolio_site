@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block body_tag %}
-    <body onload="change_background()">
+<body onload="change_background()">
 {% endblock %}
 
 {% block content %}
@@ -15,31 +15,32 @@
 {% endif %}
 
 
-    {% for app in app_list %}
-    <div class="column">
-            <img width="100" height="100" src="{% static app.return_img_url %}">
+{% for app in app_list %}
+<div class="column">
+    <img width="100" height="100" src="{% static app.return_img_url %}">
 
-            <div class="app-name">
-                {{ app.name }}
-            </div>
-
-
-        <div class="app-description"><span>{{ app.description|safe|linebreaksbr }}</span></div>
-
-        <p>GitHub Link: <a class="fa fa-github" target="_blank" rel="noopener noreferrer" href="{{ app.github_link }}"></a></p>
-
-            {% if app.other_link != '' and app.other_link != null %}
-       <p>Other Link/s: <a target="_blank" href="{{ app.other_link }}">Click</a></p>
-            {% endif %}
-
-        {% if user.is_authenticated %}
-
-            <div class="menu">
-                <a class="btn btn-primary" href="{% url 'app_edit' slug=app.slug %}">Edit</a>
-                <a class="btn btn-danger" href="{% url 'app_remove' slug=app.slug %}">Remove</a>
-            </div>
-        {% endif %}
+    <div class="app-name">
+        {{ app.name }}
     </div>
-    {% endfor %}
+
+
+    <div class="app-description"><span>{{ app.description|safe|linebreaksbr }}</span></div>
+
+    <p>GitHub Link: <a class="fa fa-github" target="_blank" rel="noopener noreferrer" href="{{ app.github_link }}"></a>
+    </p>
+
+    {% if app.other_link != '' and app.other_link != null %}
+    <p>Other Link/s: <a target="_blank" href="{{ app.other_link }}">Click</a></p>
+    {% endif %}
+
+    {% if user.is_authenticated %}
+
+    <div class="menu">
+        <a class="btn btn-primary" href="{% url 'app_edit' slug=app.slug %}">Edit</a>
+        <a class="btn btn-danger" href="{% url 'app_remove' slug=app.slug %}">Remove</a>
+    </div>
+    {% endif %}
+</div>
+{% endfor %}
 </div>
 {% endblock %}
