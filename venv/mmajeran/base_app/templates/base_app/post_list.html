@@ -30,7 +30,7 @@
     {% endif %}
     <h1 class="repair-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h1>
     <div class="date">
-        <p>Published on: {{ post.publish_date|date:"D M Y" }} by {{ post.author }}</p>
+        <p>Published on: {{ post.publish_date|date:"M Y" }} by {{ post.author }}</p>
     </div>
     {% endfor %}
 </div>
